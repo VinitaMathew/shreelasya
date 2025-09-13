@@ -1,0 +1,56 @@
+.routingContainer {
+  .sree-menu-container {
+    display: flex;
+    .sree-logo {
+      height: 84px;
+      position: relative;
+      top: 45px;
+    }
+  }
+  .sree-landing-page {
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+    .sree-border-image1 {
+      position: absolute;
+      left: -303px;
+    }
+    .sree-checkup-button {
+      width: 176px;
+      height: 48px;
+      background-color: white;
+      border-radius: 8px;
+      font-size: 18px;
+      margin-top: 13px;
+      position: absolute;
+      left: 630%;
+      cursor: pointer;
+    }
+    .intro-wrapper {
+      background-image: url("../../assets/info-background.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position-x: -85px;
+      .sree-info-container {
+        display: flex;
+        //max-width: 85%;
+        margin: auto;
+        justify-content: space-between;
+        margin-top: 80px;
+        .sree-info-image {
+          width: 460px;
+          margin-top: 85px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .routingContainer {
+    .sree-landing-page {
+      //max-width: 85%;
+    }
+  }
+}

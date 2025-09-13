@@ -1,0 +1,25 @@
+.services-container {
+  //max-width: 85%;
+  margin: auto;
+  .bharatanatyam-section {
+    padding-top: 70px;
+    min-height: 400px;
+    justify-content: center;
+    display: flex;
+  }
+  .learn-section {
+    padding-top: 70px;
+    min-height: 400px;
+    justify-content: center;
+    display: flex;
+    button {
+      max-height: 35px;
+    }
+  }
+  .services-section {
+    padding-top: 70px;
+    min-height: 400px;
+    justify-content: center;
+    display: flex;
+  }
+}
