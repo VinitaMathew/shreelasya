@@ -12,12 +12,18 @@
   background: #060608;
   .common-container {
     display: flex;
-    //max-width: 85%;
+    max-width: 95%;
     justify-content: space-between;
     margin: auto;
+    button {
+      background: none;
+      border-color: white;
+      color: white;
+      margin-top: -6px;
+    }
   }
   .logo {
-    width: 125px;
+    width: 161px;
     height: auto;
   }
   .mobile-wrapper-menu {
@@ -45,7 +51,7 @@
       margin: unset;
       .nav-link {
         font-weight: 400;
-        font-size: 16px;
+        font-size: 20px;
         list-style: none;
         cursor: pointer;
       }

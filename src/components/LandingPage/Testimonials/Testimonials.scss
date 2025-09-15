@@ -1,5 +1,7 @@
 .testimonials-container {
   margin-block: 150px 100px;
+  // max-width: 90%;
+  // margin: auto;
   h4 {
     display: flex;
     justify-content: center;
@@ -27,7 +29,7 @@
     padding-left: var(--slide-spacing);
     margin-right: 20px;
     margin-left: 10px;
-    flex: 0 0 calc(100% / 2.3);
+    flex: 0 0 calc(100% / 2.5);
   }
   .embla__slide:nth-child(1) {
     margin-left: 0px;
@@ -116,7 +118,7 @@
     justify-self: flex-end;
     align-self: center;
     width: 13rem;
-    max-width: 90%;
+    max-width: 95%;
     overflow: hidden;
   }
   .embla__progress__bar {
@@ -152,6 +154,16 @@
     }
     100% {
       transform: translate3d(100%, 0, 0);
+    }
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .testimonials-container {
+    max-width: 1400px;
+    margin: auto;
+    .embla__slide {
+      flex: 0 0 calc(100% / 2);
     }
   }
 }

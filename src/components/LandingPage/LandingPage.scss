@@ -34,7 +34,7 @@
       background-position-x: -85px;
       .sree-info-container {
         display: flex;
-        //max-width: 85%;
+        max-width: 95%;
         margin: auto;
         justify-content: space-between;
         margin-top: 80px;
@@ -50,7 +50,7 @@
 @media only screen and (max-width: 1440px) {
   .routingContainer {
     .sree-landing-page {
-      //max-width: 85%;
+      max-width: 95%;
     }
   }
 }

@@ -35,6 +35,7 @@ export default function Menu(props) {
   };
 
   const handleMenuClick = () => {
+    window.scrollTo(0, 0);
     setCurrentPath(window.location.href.split("/").pop());
     setIsMenuOpen(false);
   };
@@ -62,7 +63,6 @@ export default function Menu(props) {
             className="logoLink"
             onClick={() => {
               handleMenuClick();
-              window.scrollTo(0, 0);
             }}
           >
             <img src={Logo} alt="" className="logo" />
@@ -89,7 +89,6 @@ export default function Menu(props) {
                   className="nav-link"
                   onClick={() => {
                     handleMenuClick();
-                    window.scrollTo(0, 0);
                   }}
                 >
                   <NavLink end to="/" className="link">
@@ -100,7 +99,6 @@ export default function Menu(props) {
                   className="nav-link"
                   onClick={() => {
                     handleMenuClick();
-                    window.scrollTo(0, 0);
                   }}
                 >
                   <NavLink to="/about" className="link">
@@ -111,7 +109,6 @@ export default function Menu(props) {
                   className="nav-link"
                   onClick={() => {
                     handleMenuClick();
-                    window.scrollTo(0, 0);
                   }}
                 >
                   <NavLink to="/events" className="link">
@@ -122,7 +119,6 @@ export default function Menu(props) {
                   className="nav-link"
                   onClick={() => {
                     handleMenuClick();
-                    window.scrollTo(0, 0);
                   }}
                 >
                   <NavLink to="/contact" className="link">

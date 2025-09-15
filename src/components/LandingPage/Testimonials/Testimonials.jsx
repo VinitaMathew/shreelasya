@@ -10,6 +10,7 @@ import {
 } from "./EmblaCarouselArrowButtons";
 import strengthsData from "../Gallery/GalleryCarousel/galleryCorouselData";
 import "./Testimonials.scss";
+import { Container } from "react-bootstrap";
 
 const Testimonials = (props) => {
   const options = { loop: true, align: "start", slidesToScroll: 1 };
@@ -35,6 +36,7 @@ const Testimonials = (props) => {
   }, [emblaApi]);
 
   return (
+    // <Container fluid="xl">
     <div className="testimonials-container ">
       <h4>Our testimonials</h4>
       <div className="embla">
@@ -80,6 +82,7 @@ const Testimonials = (props) => {
         </div>
       </div>
     </div>
+    // </Container>
   );
 };
 

@@ -1,6 +1,6 @@
 import Info from "./InfoSection/Info";
 // import BorderImage1 from "../../assets/border-img1.svg";
-import InfoImage from "../../assets/info-image.svg";
+import InfoImage from "../../assets/info-image.png";
 import "./LandingPage.scss";
 import SneakPeek from "./SneakPeek/SneakPeek";
 import Testimonials from "./Testimonials/Testimonials";

@@ -32,8 +32,6 @@ export default function GalleryCarousel() {
         grabCursor
         centeredSlides
         loop={true}
-        loopedSlides={strengthsData.length} // allow full loop
-        loopFillGroupWithBlank={true}
         slidesPerView={3} // show 5 cards
         //spaceBetween={-50}
         coverflowEffect={{

@@ -9,8 +9,8 @@ const SneakPeek = React.forwardRef((props, sneakPeekRef) => {
     triggerOnce: true,
   });
   return (
-    <div className="sneakpeek-container" ref={sneakPeekRef}>
-      <Container>
+    <Container>
+      <div className="sneakpeek-container" ref={sneakPeekRef}>
         <div
           style={{ paddingTop: "30px" }}
           ref={ref}
@@ -25,8 +25,8 @@ const SneakPeek = React.forwardRef((props, sneakPeekRef) => {
             ></iframe>
           </div>
         </div>
-      </Container>
-    </div>
+      </div>
+    </Container>
   );
 });
 
