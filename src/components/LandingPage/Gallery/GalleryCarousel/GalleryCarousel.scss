@@ -1,7 +1,6 @@
 .stacked-carousel {
   position: relative;
   width: 100%;
-  max-width: 1000px;
   margin: 0 auto;
   height: 400px;
 
@@ -15,40 +14,55 @@
     justify-content: center;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     color: #333;
-    height: 300px;
     user-select: none;
-    opacity: 0.7;
+    opacity: 0.5;
+  }
+  .swiper-slide-active {
+    height: 398px;
   }
 
   .swiper-slide-active,
   .swiper-slide-prev,
   .swiper-slide-next {
     opacity: 1 !important;
-    transform: scale(1.05);
-    z-index: 2;
+  }
+
+  .swiper-slide {
+    visibility: hidden;
+  }
+  .swiper-slide-visible {
+    visibility: visible;
   }
 
   .btn-container {
     position: absolute;
-    top: 85%;
+    top: 107%;
     display: flex;
-    width: 100%;
     justify-content: center;
+    gap: 1.6rem;
+    align-items: center;
+    width: 100%;
     .nav-btn {
-      transform: translateY(-50%);
+      padding: 0;
       border: none;
       border-radius: 50%;
-      width: 40px;
       height: 40px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-      transition: background 0.2s;
+      width: 40px;
+      background-color: #303032;
+      color: white;
+      min-width: 0;
       z-index: 10;
-
-      &:hover {
-        background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        width: 35%;
+        height: 35%;
       }
+
+      // &:hover {
+      //   background: white;
+      // }
 
       // &.left-btn {
       //   left: -50px;

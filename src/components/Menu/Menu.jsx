@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import "./Menu.scss";
 
@@ -17,6 +17,9 @@ export default function Menu(props) {
     window.location.href.split("/").pop()
   );
   const [scrollY, setScrollY] = useState(0);
+
+  const navigate = useNavigate();
+  const [shouldRunFn, setShouldRunFn] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,6 +42,18 @@ export default function Menu(props) {
     setCurrentPath(window.location.href.split("/").pop());
     setIsMenuOpen(false);
   };
+
+  const bookClassClick = () => {
+    setShouldRunFn(true); // mark that we want to run the function
+    navigate("/"); // trigger navigation
+  };
+
+  useEffect(() => {
+    if (shouldRunFn && location.pathname === "/") {
+      props.joinClassClick(); // run only after navigating to /
+      setShouldRunFn(false); // reset flag
+    }
+  }, [location, shouldRunFn]);
 
   useEffect(() => {
     setCurrentPath(window.location.href.split("/").pop());
@@ -128,7 +143,7 @@ export default function Menu(props) {
               </ul>
             </div>
           ) : null}
-          <button onClick={props.joinClassClick}>Book a free class</button>
+          <button onClick={() => bookClassClick()}>Book a free class</button>
         </div>
       </Container>
     </div>

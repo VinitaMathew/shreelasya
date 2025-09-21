@@ -2,10 +2,10 @@ import Info from "./InfoSection/Info";
 // import BorderImage1 from "../../assets/border-img1.svg";
 import InfoImage from "../../assets/info-image.png";
 import "./LandingPage.scss";
+import ServicesSection from "./Services/ServicesSection";
 import SneakPeek from "./SneakPeek/SneakPeek";
 import Testimonials from "./Testimonials/Testimonials";
 import UpcomingEvents from "./UpcomingEvents/UpcomingEvents";
-import Services from "./Services/Services";
 import Gallery from "./Gallery/Gallery";
 import KnowMore from "./KnowMore/KnowMore";
 import { Container } from "react-bootstrap";
@@ -26,7 +26,7 @@ export default function LandingPage(props) {
         </Container>
         <UpcomingEvents />
       </div>
-      <Services joinClassClick={props.joinClassClick} />
+      <ServicesSection joinClassClick={props.joinClassClick} />
       <SneakPeek ref={props.sneakPeekRef} />
       <Testimonials />
       <Gallery />

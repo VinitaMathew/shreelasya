@@ -1,0 +1,101 @@
+.services-container {
+  .bharatanatyam-section {
+    padding-top: 160px;
+    min-height: 400px;
+    background-image: url("../../../assets/bharatanatyamBg.svg");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: 180px;
+    .section {
+      display: flex;
+      flex-direction: row;
+      max-width: 95%;
+      margin: auto;
+      align-items: center;
+      justify-content: space-between;
+      h2 {
+        margin-bottom: 20px;
+        position: relative;
+        &::before {
+          content: url("../../../assets/bharatanatyam-design.svg");
+          position: absolute;
+          bottom: 20px;
+          left: -15px;
+        }
+      }
+      .content {
+        max-width: 490px;
+        font-size: 18px;
+        margin-bottom: 70px;
+      }
+    }
+  }
+  .learn-section {
+    align-items: end;
+    display: flex;
+    min-height: 685px;
+    background-image: url(../../../assets/learn-section-bg.svg);
+    background-repeat: no-repeat;
+    background-size: 115%;
+    background-position-x: -120px;
+    .section {
+      display: flex;
+      max-width: 95%;
+      margin: auto;
+      img {
+        margin-left: -250px;
+      }
+      h2 {
+        margin-bottom: 20px;
+        position: relative;
+        width: fit-content;
+        &::after {
+          content: url("../../../assets/learn-section-design.svg");
+          position: absolute;
+          bottom: 25px;
+          right: -5px;
+        }
+      }
+      .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-block: auto;
+        z-index: 1;
+        .content {
+          width: 735px;
+          font-size: 18px;
+          margin-bottom: 40px;
+        }
+        button {
+          max-height: 35px;
+          font-weight: 600;
+          width: fit-content;
+        }
+      }
+    }
+  }
+  .services-section {
+    min-height: 400px;
+    justify-content: center;
+    display: flex;
+    min-height: 750px;
+    align-items: center;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      max-width: 95%;
+      margin: auto;
+      padding: 0;
+      li {
+        list-style: none;
+        .label {
+          width: 80%;
+          margin: auto;
+          text-align: center;
+          padding-top: 30px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

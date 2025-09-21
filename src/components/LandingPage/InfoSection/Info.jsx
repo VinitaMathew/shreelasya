@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import "./Info.scss";
 
 export default function Info(props) {

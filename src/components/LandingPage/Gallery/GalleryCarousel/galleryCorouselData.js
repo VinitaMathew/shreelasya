@@ -1,47 +1,34 @@
-import Strength1 from "../../../../assets/strength1.jpg";
-import Strength2 from "../../../../assets/strength2.jpg";
+import Gallery1 from "../../../../assets/gallery1.svg";
+import Gallery2 from "../../../../assets/gallery2.svg";
+import Gallery3 from "../../../../assets/gallery3.svg";
+import Gallery4 from "../../../../assets/gallery4.svg";
+import Gallery5 from "../../../../assets/gallery5.svg";
 
-const strengthsData = [
+const galleryData = [
   {
-    cover: Strength1,
-    title: "Wide range of sustainable food products with traceability",
+    cover: Gallery1,
+    title: "",
   },
   {
-    cover: Strength2,
-    title: "State of the art facilities for storage and distribution",
+    cover: Gallery2,
+    title: "",
   },
   {
-    cover: Strength1,
-    title: "Wide range of sustainable food products with traceability",
+    cover: Gallery3,
+    title: "",
   },
   {
-    cover: Strength2,
-    title: "State of the art facilities for storage and distribution",
+    cover: Gallery4,
+    title: "",
   },
   {
-    cover: Strength1,
-    title: "Wide range of sustainable food products with traceability",
+    cover: Gallery5,
+    title: "",
   },
   {
-    cover: Strength2,
-    title: "State of the art facilities for storage and distribution",
-  },
-  {
-    cover: Strength1,
-    title: "Wide range of sustainable food products with traceability",
-  },
-  {
-    cover: Strength2,
-    title: "State of the art facilities for storage and distribution",
-  },
-  {
-    cover: Strength1,
-    title: "Wide range of sustainable food products with traceability",
-  },
-  {
-    cover: Strength2,
-    title: "State of the art facilities for storage and distribution",
+    cover: Gallery3,
+    title: "",
   },
 ];
 
-export default strengthsData;
+export default galleryData;

@@ -1,9 +1,21 @@
 .gallery-container {
-  max-width: 95%;
-  margin: auto;
-  h4 {
-    display: flex;
-    justify-content: center;
-    margin-block: 70px;
+  min-height: 800px;
+  .gallery-wrapper {
+    max-width: 95%;
+    margin: auto;
+    h2 {
+      display: flex;
+      justify-content: center;
+      margin-block: 130px;
+      position: relative;
+      width: fit-content;
+      margin-inline: auto;
+      &::before {
+        position: absolute;
+        content: url(../../../assets/testimonials-design.svg);
+        left: -12px;
+        bottom: 20px;
+      }
+    }
   }
 }

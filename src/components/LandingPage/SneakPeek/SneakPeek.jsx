@@ -16,13 +16,15 @@ const SneakPeek = React.forwardRef((props, sneakPeekRef) => {
           ref={ref}
           className={inView ? "slide-up" : "hidden"}
         >
-          <h4>A sneak peak into our classes</h4>
-          <div className="ratio ratio-16x9">
-            <iframe
-              src="https://www.youtube.com/embed/qAy3Shv5EgI?si=AHcQBTftFYeiS3wP"
-              title="YouTube video"
-              allowFullScreen
-            ></iframe>
+          <h2>A sneak peek into our classes</h2>
+          <div className="video-wrapper">
+            <div className="ratio ratio-16x9">
+              <iframe
+                src="https://www.youtube.com/embed/qAy3Shv5EgI?si=AHcQBTftFYeiS3wP"
+                title="YouTube video"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>

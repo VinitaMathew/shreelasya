@@ -1,9 +1,27 @@
 .sneakpeek-container {
-  max-width: 95%;
+  max-width: 80%;
   margin: auto;
-  h4 {
+  h2 {
     display: flex;
     justify-content: center;
     margin-block: 70px;
+  }
+  .video-wrapper {
+    position: relative;
+    .ratio {
+      z-index: 1;
+    }
+    &::before {
+      position: absolute;
+      content: url("../../../assets/sneakpeek-design-left.svg");
+      left: -61px;
+      top: -61px;
+    }
+    &::after {
+      position: absolute;
+      content: url("../../../assets/sneakpeek-design-right.svg");
+      bottom: -70px;
+      right: -61px;
+    }
   }
 }

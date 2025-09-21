@@ -8,9 +8,8 @@ import {
   PrevButton,
   usePrevNextButtons,
 } from "./EmblaCarouselArrowButtons";
-import strengthsData from "../Gallery/GalleryCarousel/galleryCorouselData";
+import testimonialsData from "./testimonialsData";
 import "./Testimonials.scss";
-import { Container } from "react-bootstrap";
 
 const Testimonials = (props) => {
   const options = { loop: true, align: "start", slidesToScroll: 1 };
@@ -38,14 +37,19 @@ const Testimonials = (props) => {
   return (
     // <Container fluid="xl">
     <div className="testimonials-container ">
-      <h4>Our testimonials</h4>
+      <h2>Our testimonials</h2>
       <div className="embla">
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
-            {strengthsData.map((item, index) => (
+            {testimonialsData.map((item, index) => (
               <div className="embla__slide" key={index}>
                 <div className="embla__slide__number">
-                  <span>{index + 1}</span>
+                  {item.image && <img src={item.image}></img>}
+                  <div className="content">{item.content}</div>
+                  <div className="user-info">
+                    <div className="name">{item.name}</div>
+                    <div className="role">{item.role}</div>
+                  </div>
                 </div>
               </div>
             ))}
