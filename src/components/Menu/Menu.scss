@@ -9,7 +9,6 @@
   left: 50%;
   transform: translateX(-50%);
   transition: padding 0.3s ease-in-out;
-  background: #060608;
   .common-container {
     display: flex;
     max-width: 95%;
@@ -76,6 +75,7 @@
 
 .menu-container-desktop.scrolled {
   padding-top: 24px;
+  background: #060608;
   .menu-list {
     padding-bottom: 22px;
   }

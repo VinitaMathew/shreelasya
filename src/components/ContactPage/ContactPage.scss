@@ -1,0 +1,39 @@
+.contact-page-container {
+  display: flex;
+  flex-direction: column;
+  .content {
+    margin-block: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .desc {
+      font-size: 18px;
+      width: 600px;
+      text-align: center;
+      margin-top: 16px;
+    }
+  }
+  .contact-section {
+    display: flex;
+    background-color: #3f3f3f;
+    padding: 70px 110px;
+    border-radius: 10px;
+    margin-block: 80px 60px;
+    gap: 34px;
+    .address-wrapper,
+    .contact-wrapper {
+      display: flex;
+      gap: 36px;
+      img {
+        width: 72px;
+      }
+    }
+  }
+  .divider {
+    width: 1px;
+    height: 48px;
+    background-color: white;
+    margin: 0 15px;
+    align-self: center;
+  }
+}

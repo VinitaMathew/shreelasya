@@ -1,25 +1,67 @@
 .know-more-container {
   .whatsapp-section {
     padding-top: 70px;
-    min-height: 400px;
+    min-height: 733px;
     justify-content: center;
     display: flex;
-    button {
-      max-height: 35px;
+    background-repeat: no-repeat;
+    width: 1445px;
+    margin: auto;
+    background-image: url("../../../assets/whatsappBg.svg");
+    .inner-wrapper {
+      max-width: 95%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      margin-top: 60px;
+      gap: 34px;
+      h2 {
+        position: relative;
+        width: fit-content;
+        margin: 0;
+        &::after {
+          position: absolute;
+          content: url("../../../assets/whatsappDesign.svg");
+          top: -17px;
+          right: -14px;
+        }
+      }
+      .content {
+        font-size: 18px;
+        max-width: 511px;
+      }
+      button {
+        max-height: 35px;
+        font-weight: bold;
+        width: fit-content;
+        padding-inline: 16px;
+      }
     }
   }
   .insta-section {
-    padding-top: 70px;
-    min-height: 400px;
+    align-items: center;
     justify-content: center;
     display: flex;
+    background-image: url("../../../assets/instagramBg.svg");
+    background-repeat: no-repeat;
+    max-width: 1440px;
+    margin: auto;
+    height: 358px;
+    transition: opacity 0.3s;
     button {
-      max-height: 35px;
+      height: 120px;
+      width: 120px;
+      min-width: unset;
+      border-radius: 50%;
     }
   }
+  .insta-section:has(button:hover) {
+    opacity: 0.8;
+  }
+
   .calendly-section {
-    padding-top: 70px;
-    min-height: 680px;
+    padding-block: 100px;
+    margin-top: 100px;
     justify-content: center;
     display: flex;
   }

@@ -1,0 +1,17 @@
+.about-page-container {
+  .landing-wrapper {
+    height: 987px;
+    background-image: url("../../assets/about-page-bg.svg");
+    .section {
+      max-width: 95%;
+      margin: auto;
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        max-width: 515px;
+        padding-top: 210px;
+      }
+    }
+  }
+}
