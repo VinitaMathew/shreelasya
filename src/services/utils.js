@@ -2,7 +2,7 @@ export function getUpcomingEvents(events, count = 2) {
   const now = new Date();
 
   return events
-    .filter((event) => new Date(event.start.dateTime) > now) // only future events
+    ?.filter((event) => new Date(event.start.dateTime) > now) // only future events
     .sort((a, b) => new Date(a.start.dateTime) - new Date(b.start.dateTime)) // sort by start date
     .slice(0, count); // get first N (default 2)
 }

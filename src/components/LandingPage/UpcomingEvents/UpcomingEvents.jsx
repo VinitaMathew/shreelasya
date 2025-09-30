@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import "./UpcomingEvents.scss";
-import { getEvents } from "../../../services/useApi";
 import {
   getUpcomingEvents,
   formatEventDate,
@@ -9,26 +8,16 @@ import {
   getEventDetails,
 } from "../../../services/utils";
 import { useEffect, useState } from "react";
+import { useEventsStore } from "../../../store";
 
 export default function UpcomingEvents() {
-  const [events, setEvents] = useState(null);
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    async function loadData() {
-      setLoading(true);
-      try {
-        const json = await getEvents(); // call the fetch function
-        setEvents(getUpcomingEvents(json?.items));
-        setLoading(false);
-        console.log(getUpcomingEvents(json?.items));
-      } catch (error) {
-        console.error("Error loading data:", error);
-        setLoading(false);
-      }
-    }
+  let store = useEventsStore();
+  let { events, isLoading, error } = store;
+  const [upcomingEvents, setUpcomingEvents] = useState(null);
 
-    loadData();
-  }, []);
+  useEffect(() => {
+    setUpcomingEvents(getUpcomingEvents(events));
+  }, [events]);
 
   const handleEventClick = (desc) => {
     const [description, link] = getEventDetails(desc);
@@ -45,10 +34,10 @@ export default function UpcomingEvents() {
               <button>View all events</button>
             </NavLink>
           </div>
-          {loading && <div>Loading...</div>}
-          {events && events?.length > 0 ? (
+          {isLoading && <div>Loading...</div>}
+          {upcomingEvents && upcomingEvents?.length > 0 ? (
             <ul className="events-list">
-              {events.map((event, index) => {
+              {upcomingEvents.map((event, index) => {
                 return (
                   <li
                     key={index}
@@ -77,7 +66,7 @@ export default function UpcomingEvents() {
               })}
             </ul>
           ) : (
-            !loading && <div>No events to show</div>
+            (!isLoading || error) && <div>No events to show</div>
           )}
         </div>
       </Container>

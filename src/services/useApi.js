@@ -9,7 +9,6 @@ export async function getEvents() {
     }
     return await response.json(); // return JSON
   } catch (error) {
-    console.error("Fetch error:", error);
     throw error; // rethrow so caller can handle
   }
 }
