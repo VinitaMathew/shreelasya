@@ -8,7 +8,9 @@ export default function AboutPage() {
         <Container>
           <div className="section">
             <div className="content">
-              <div style={{ fontSize: "64px" }}>Subhashree Thyagarajan</div>
+              <div style={{ fontSize: "64px", fontFamily: "Lora" }}>
+                Subhashree Thyagarajan
+              </div>
               <div style={{ fontSize: "18px" }}>
                 A torchbearer of Bharatanatyam’s timeless grace, Subhashree
                 weaves rhythm, expression, and devotion into every step she

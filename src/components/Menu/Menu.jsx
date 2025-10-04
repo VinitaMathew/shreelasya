@@ -50,13 +50,17 @@ export default function Menu(props) {
 
   useEffect(() => {
     if (shouldRunFn && location.pathname === "/") {
-      props.joinClassClick(); // run only after navigating to /
-      setShouldRunFn(false); // reset flag
+      //set timeout to run this after window.scroll(0,0)
+      setTimeout(() => {
+        props.joinClassClick(); // run only after navigating to /
+        setShouldRunFn(false); // reset flag
+      });
     }
   }, [location, shouldRunFn]);
 
   useEffect(() => {
     setCurrentPath(window.location.href.split("/").pop());
+    window.scrollTo(0, 0);
   }, [location]);
 
   return (

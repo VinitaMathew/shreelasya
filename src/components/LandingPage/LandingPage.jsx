@@ -1,5 +1,4 @@
 import Info from "./InfoSection/Info";
-// import BorderImage1 from "../../assets/border-img1.svg";
 import InfoImage from "../../assets/info-image.png";
 import "./LandingPage.scss";
 import ServicesSection from "./Services/ServicesSection";
@@ -13,7 +12,6 @@ import { Container } from "react-bootstrap";
 export default function LandingPage(props) {
   return (
     <div className="sree-landing-page">
-      {/* <img className="sree-border-image1" src={BorderImage1} alt="" /> */}
       <div className="intro-wrapper">
         <Container>
           <div className="sree-info-container">

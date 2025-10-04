@@ -8,7 +8,9 @@ export default function ContactPage() {
     <Container>
       <div className="contact-page-container">
         <div className="content">
-          <div style={{ fontSize: "64px" }}>Get in touch</div>
+          <div style={{ fontSize: "64px", fontFamily: "Lora" }}>
+            Get in touch
+          </div>
           <div className="desc">
             We’d love to hear from you! Whether you have a question, feedback,
             or just want to say hello, reach out to us.

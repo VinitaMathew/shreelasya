@@ -1,9 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
-
 .routingContainer {
   color: #ffffff;
   background: #060608;
-  font-family: "Lora", serif;
+  font-family: "Lato", serif;
   button {
     background: #f3bb3e;
     border: #f3bb3e 1px solid;
@@ -11,5 +9,9 @@
     height: 40px;
     border-radius: 8px;
     min-width: 176px;
+    font-family: "Lora", serif;
+  }
+  h2 {
+    font-family: "Lora", serif;
   }
 }
