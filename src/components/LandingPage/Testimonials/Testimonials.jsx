@@ -9,6 +9,7 @@ import {
   usePrevNextButtons,
 } from "./EmblaCarouselArrowButtons";
 import testimonialsData from "./testimonialsData";
+import { useInView } from "react-intersection-observer";
 import "./Testimonials.scss";
 
 const Testimonials = (props) => {
@@ -30,13 +31,25 @@ const Testimonials = (props) => {
 
   const { showAutoplayProgress } = useAutoplayProgress(emblaApi, progressNode);
 
+  const [ref, inView] = useInView({
+    threshold: 0.3,
+    triggerOnce: true,
+  });
+
   useEffect(() => {
     toggleAutoplay();
   }, [emblaApi]);
 
   return (
     // <Container fluid="xl">
-    <div className="testimonials-container ">
+    <div
+      ref={ref}
+      className={
+        inView
+          ? "slide-up testimonials-container "
+          : "hidden testimonials-container "
+      }
+    >
       <h2>Our testimonials</h2>
       <div className="embla">
         <div className="embla__viewport" ref={emblaRef}>

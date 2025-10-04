@@ -9,11 +9,17 @@ import {
 } from "../../../services/utils";
 import { useEffect, useState } from "react";
 import { useEventsStore } from "../../../store";
+import { useInView } from "react-intersection-observer";
 
 export default function UpcomingEvents() {
   let store = useEventsStore();
   let { events, isLoading } = store;
   const [upcomingEvents, setUpcomingEvents] = useState(null);
+
+  const [ref, inView] = useInView({
+    threshold: 0.3,
+    triggerOnce: true,
+  });
 
   useEffect(() => {
     setUpcomingEvents(getUpcomingEvents(events, 2));
@@ -24,7 +30,14 @@ export default function UpcomingEvents() {
     window.open(link, "_blank");
   };
   return (
-    <div className="upcoming-events-wrapper">
+    <div
+      ref={ref}
+      className={
+        inView
+          ? "slide-up upcoming-events-wrapper"
+          : "hidden upcoming-events-wrapper"
+      }
+    >
       <Container>
         <div className="inner-wrapper">
           <div className="button-section">

@@ -2,14 +2,31 @@ import { Container } from "react-bootstrap";
 import BharatanatyamImg from "../../../assets/bharatanatyam.svg";
 import LearnImg from "../../../assets/learn-section-img.svg";
 import servicesArr from "./servicesData";
+import { useInView } from "react-intersection-observer";
 import "./ServicesSection.scss";
 
 export default function ServicesSection(props) {
+  const [ref, inView] = useInView({
+    threshold: 0.3,
+    triggerOnce: true,
+  });
+  const [ref2, inView2] = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
+  const [ref3, inView3] = useInView({
+    threshold: 0.3,
+    triggerOnce: true,
+  });
+
   return (
     <div className="services-container">
       <div className="bharatanatyam-section">
         <Container>
-          <div className="section">
+          <div
+            ref={ref}
+            className={inView ? "slide-up section" : "hidden section"}
+          >
             <img src={BharatanatyamImg}></img>
             <section>
               <h2>Why Bharatanatyam?</h2>
@@ -24,7 +41,10 @@ export default function ServicesSection(props) {
       </div>
       <div className="learn-section">
         <Container>
-          <div className="section">
+          <div
+            ref={ref2}
+            className={inView2 ? "slide-up section" : "hidden section"}
+          >
             <div className="content-wrapper">
               <h2>Why Learn With Sree Laysa?</h2>
               <div className="content">
@@ -43,7 +63,7 @@ export default function ServicesSection(props) {
       </div>
       <div className="services-section">
         <Container>
-          <ul>
+          <ul ref={ref3} className={inView3 ? "slide-up" : "hidden"}>
             {servicesArr.map((service, index) => {
               return (
                 <li key={index}>
