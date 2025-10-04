@@ -39,6 +39,16 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
+          <div style={{ maxWidth: "360px", textAlign: "center" }}>
+            For more queries please fill out the Google form and we’ll get back
+            to you :)
+          </div>
+          <button
+            className="form-button"
+            onClick={() => window.open("http://www.google.com/", "_blank")}
+          >
+            Open form
+          </button>
         </div>
       </div>
     </Container>

@@ -12,11 +12,11 @@ import { useEventsStore } from "../../../store";
 
 export default function UpcomingEvents() {
   let store = useEventsStore();
-  let { events, isLoading, error } = store;
+  let { events, isLoading } = store;
   const [upcomingEvents, setUpcomingEvents] = useState(null);
 
   useEffect(() => {
-    setUpcomingEvents(getUpcomingEvents(events));
+    setUpcomingEvents(getUpcomingEvents(events, 2));
   }, [events]);
 
   const handleEventClick = (desc) => {
@@ -66,7 +66,7 @@ export default function UpcomingEvents() {
               })}
             </ul>
           ) : (
-            (!isLoading || error) && <div>No events to show</div>
+            <div>No events to show</div>
           )}
         </div>
       </Container>

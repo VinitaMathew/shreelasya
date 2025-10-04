@@ -9,7 +9,6 @@ export const useEventsStore = create((set) => ({
     set({ isLoading: true });
     try {
       const response = await getEvents(); // call the fetch function
-      debugger;
       set({ events: response.items });
     } catch (error) {
       set({ error: error.message });
