@@ -3,6 +3,7 @@ import Gallery2 from "../../../../assets/gallery2.svg";
 import Gallery3 from "../../../../assets/gallery3.svg";
 import Gallery4 from "../../../../assets/gallery4.svg";
 import Gallery5 from "../../../../assets/gallery5.svg";
+import Gallery6 from "../../../../assets/gallery6.svg";
 
 const galleryData = [
   {
@@ -26,7 +27,7 @@ const galleryData = [
     title: "",
   },
   {
-    cover: Gallery3,
+    cover: Gallery6,
     title: "",
   },
 ];

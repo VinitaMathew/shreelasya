@@ -55,7 +55,7 @@ export default function GalleryCarousel() {
               style={{
                 height: "100%",
                 width: "100%",
-                objectFit: "cover",
+                objectFit: "contain",
                 borderRadius: 5,
               }}
               draggable={false}
