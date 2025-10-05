@@ -28,7 +28,22 @@
       .left-container {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 22px;
+
+        .read-more-btn {
+          background: none;
+          border: none;
+          color: #007bff;
+          padding: 0;
+          display: inline;
+          min-width: unset;
+          margin: 0;
+          max-height: fit-content;
+        }
+
+        .read-more-btn:hover {
+          text-decoration: underline;
+        }
       }
       button {
         font-weight: 700;

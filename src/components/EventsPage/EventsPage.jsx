@@ -13,6 +13,30 @@ export default function EventsPage() {
   let store = useEventsStore();
   let { events, isLoading } = store;
   const [upcomingEvents, setUpcomingEvents] = useState(null);
+  const [expandedCards, setExpandedCards] = useState({});
+
+  const toggleExpand = (id) => {
+    setExpandedCards((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
+
+  function getDescriptionSection(text, index) {
+    const expanded = expandedCards[index] || false;
+    const isLong = text.length > 110;
+    const displayText = expanded ? text : text.slice(0, 110);
+    return (
+      <div style={{ fontSize: "18px", display: "inline" }}>
+        {displayText}
+        {isLong && (
+          <button className="read-more-btn" onClick={() => toggleExpand(index)}>
+            {expanded ? "read less" : "read more..."}
+          </button>
+        )}
+      </div>
+    );
+  }
 
   useEffect(() => {
     let upcomingEvents = getUpcomingEvents(events);
@@ -38,7 +62,7 @@ export default function EventsPage() {
                     <div style={{ fontSize: "24px", fontWeight: 700 }}>
                       {event.summary}
                     </div>
-                    <div style={{ fontSize: "18px" }}>{event.desc}</div>
+                    {getDescriptionSection(event.desc, index)}
                     <div>
                       <div style={{ fontSize: "18px", fontWeight: 700 }}>
                         {formatEventDateTime(
