@@ -1,5 +1,4 @@
 .contact-contanier {
-  height: 400px;
   max-width: 95%;
   margin: auto;
   border-top: 1px solid #4f4f52;
@@ -28,6 +27,7 @@
     font-weight: 400;
     font-size: 18px;
     margin-top: 80px;
+    padding-bottom: 100px;
     .address-info {
       padding-top: 10px;
       .address-title {
@@ -42,7 +42,7 @@
       }
       button {
         height: 30px;
-        width: 30px;
+        width: 30px !important;
         min-width: unset;
         border-radius: 50%;
         display: flex;
@@ -75,5 +75,29 @@
 @media only screen and (max-width: 1440px) {
   .contact-contanier {
     max-width: 95%;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .contact-contanier {
+    height: unset;
+    .contact-info-wrapper {
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+      text-align: center;
+      .contact-desc {
+        max-width: 330px;
+        .contact-text {
+          font-size: 24px;
+        }
+      }
+      .address-info,
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   }
 }

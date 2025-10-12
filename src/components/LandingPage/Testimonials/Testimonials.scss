@@ -114,7 +114,7 @@
     align-items: center;
     justify-content: center;
     height: 40px;
-    width: 40px;
+    width: 40px !important;
     background-color: #303032;
     min-width: 0;
   }
@@ -204,6 +204,24 @@
     margin: auto;
     .embla__slide {
       flex: 0 0 calc(100% / 2);
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .testimonials-container {
+    min-height: unset;
+    .h2 {
+      margin-block: 100px 50px;
+    }
+    .embla {
+      width: 100%;
+      .embla__container {
+        margin-inline: 10px;
+        .embla__slide {
+          flex: 0 0 100%;
+        }
+      }
     }
   }
 }

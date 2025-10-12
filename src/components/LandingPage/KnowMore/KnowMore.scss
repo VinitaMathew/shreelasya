@@ -50,7 +50,7 @@
     transition: opacity 0.3s;
     button {
       height: 120px;
-      width: 120px;
+      width: 120px !important;
       min-width: unset;
       border-radius: 50%;
     }
@@ -64,5 +64,43 @@
     margin-top: 100px;
     justify-content: center;
     display: flex;
+    .widget-wrapper {
+      width: 100%;
+      max-width: 1200px;
+      min-width: 1010px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .know-more-container {
+    .whatsapp-section {
+      background-position-x: -500px;
+      width: unset;
+      .inner-wrapper {
+        max-width: unset;
+        h2 {
+          font-size: 32px;
+          &::after {
+            content: "";
+          }
+        }
+        .content {
+          font-size: 16px;
+        }
+      }
+    }
+    .insta-section {
+      background-position: bottom;
+    }
+    .calendly-section {
+      display: block;
+      margin-inline: 16px;
+      padding-bottom: 0;
+      .widget-wrapper {
+        min-width: unset;
+      }
+    }
   }
 }

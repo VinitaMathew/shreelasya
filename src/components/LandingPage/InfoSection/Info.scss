@@ -30,3 +30,18 @@
     }
   }
 }
+
+@media only screen and (max-width: 540px) {
+  .infoContainer {
+    width: unset;
+    .infoLine {
+      font-size: 48px;
+    }
+    .infoContent {
+      font-size: 16px;
+    }
+    .infoButtonContainer {
+      flex-direction: column;
+    }
+  }
+}

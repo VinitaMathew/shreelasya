@@ -78,7 +78,7 @@
     min-height: 400px;
     justify-content: center;
     display: flex;
-    min-height: 750px;
+    min-height: 700px;
     align-items: center;
     ul {
       display: flex;
@@ -94,6 +94,64 @@
           text-align: center;
           padding-top: 30px;
           font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .services-container {
+    .bharatanatyam-section {
+      background: none;
+      .section {
+        flex-flow: column-reverse;
+        img {
+          width: 150%;
+          margin-left: 50px;
+        }
+        h2 {
+          font-size: 32px;
+        }
+        .content {
+          font-size: 16px;
+        }
+      }
+    }
+    .learn-section {
+      background: none;
+      .section {
+        flex-direction: column;
+        .content-wrapper {
+          h2 {
+            font-size: 32px;
+            &::after {
+              content: "";
+            }
+          }
+          .content {
+            font-size: 16px;
+            width: unset;
+          }
+        }
+        img {
+          margin-left: -85px;
+          width: 610px;
+        }
+      }
+    }
+    .services-section {
+      ul {
+        flex-direction: column;
+        gap: 43px;
+        li {
+          img {
+            width: 100%;
+          }
+          .label {
+            width: 100%;
+            padding-top: 18px;
+          }
         }
       }
     }

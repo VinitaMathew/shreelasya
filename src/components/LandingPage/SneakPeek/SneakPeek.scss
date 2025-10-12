@@ -1,6 +1,7 @@
 .sneakpeek-container {
   max-width: 80%;
   margin: auto;
+  padding-top: 20px;
   h2 {
     display: flex;
     justify-content: center;
@@ -22,6 +23,22 @@
       content: url("../../../assets/sneakpeek-design-right.svg");
       bottom: -70px;
       right: -61px;
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .sneakpeek-container {
+    max-width: unset;
+    h2 {
+      margin-inline: 24px;
+      text-align: center;
+    }
+    .video-wrapper {
+      &::before,
+      &::after {
+        content: "";
+      }
     }
   }
 }

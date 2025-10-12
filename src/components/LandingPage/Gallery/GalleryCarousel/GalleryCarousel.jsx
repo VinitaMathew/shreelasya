@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation } from "swiper/modules";
 
@@ -25,6 +25,10 @@ export default function GalleryCarousel() {
     }
   };
 
+  const [isMobile] = useState(
+    window.matchMedia("only screen and (max-width:540px)").matches
+  );
+
   return (
     <div className="stacked-carousel">
       <Swiper
@@ -32,12 +36,12 @@ export default function GalleryCarousel() {
         grabCursor
         centeredSlides={true}
         loop={true}
-        slidesPerView={3} // show 5 cards
+        slidesPerView={isMobile ? 2 : 3} // show 5 cards
         //slidesPerView="auto"
         //spaceBetween={-50}
         coverflowEffect={{
           rotate: 0, // keep cards straight
-          stretch: 110,
+          stretch: isMobile ? -40 : 110,
           depth: 318,
           modifier: 1,
           // slideShadows: false,

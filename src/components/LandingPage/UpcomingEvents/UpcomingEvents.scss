@@ -3,6 +3,7 @@
   background: #242222;
   display: flex;
   align-items: center;
+  margin-top: 40px;
   .inner-wrapper {
     display: flex;
     max-width: 95%;
@@ -51,5 +52,11 @@
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .upcoming-events-wrapper {
+    display: none;
   }
 }

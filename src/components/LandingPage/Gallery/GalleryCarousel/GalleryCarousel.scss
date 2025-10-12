@@ -46,7 +46,7 @@
       border: none;
       border-radius: 50%;
       height: 40px;
-      width: 40px;
+      width: 40px !important;
       background-color: #303032;
       color: white;
       min-width: 0;
@@ -69,6 +69,14 @@
       // &.right-btn {
       //   right: -50px;
       // }
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .stacked-carousel {
+    .btn-container {
+      margin-top: -50px;
     }
   }
 }

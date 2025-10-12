@@ -52,14 +52,7 @@ const KnowMore = React.forwardRef((props, calendlyRef) => {
       </div>
       <div className="calendly-section" ref={calendlyRef}>
         <div ref={ref3} className={inView3 ? "slide-up" : "hidden"}>
-          <div
-            style={{
-              width: "100%",
-              maxWidth: "1200px", // ensure desktop view
-              minWidth: "1010px", // force horizontal layout
-              margin: "0 auto", // center on page
-            }}
-          >
+          <div className="widget-wrapper">
             <InlineWidget url="https://calendly.com/vinitatest2010/30min" />
           </div>
         </div>
