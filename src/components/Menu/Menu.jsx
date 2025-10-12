@@ -22,6 +22,19 @@ export default function Menu(props) {
   const [shouldRunFn, setShouldRunFn] = useState(false);
 
   useEffect(() => {
+    //prevent background scroll when mobile menu is open
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = ""; // cleanup
+    };
+  }, [isMenuOpen]);
+
+  useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.pageYOffset);
     };
@@ -44,6 +57,7 @@ export default function Menu(props) {
   };
 
   const bookClassClick = () => {
+    setIsMenuOpen(false);
     setShouldRunFn(true); // mark that we want to run the function
     navigate("/"); // trigger navigation
   };
@@ -72,82 +86,106 @@ export default function Menu(props) {
           ? "menu-container-desktop scrolled"
           : "menu-container-desktop"
       }
-      style={{ boxShadow: isMenuOpen ? "0 6px 12px rgba(0,0,0,.1)" : "unset" }}
+      style={{
+        backgroundColor: isMenuOpen
+          ? "#3d3d3e"
+          : scrollY > 0
+          ? "#060608"
+          : "unset",
+      }}
     >
       <Container>
         <div className="common-container">
-          <NavLink
-            end
-            to="/"
-            className="logoLink"
-            onClick={() => {
-              handleMenuClick();
-            }}
-          >
-            <img src={Logo} alt="" className="logo" />
-          </NavLink>
-          {isMobile ? (
-            <div className="mobile-wrapper-menu">
-              <button
-                className="menu-button"
-                onClick={() => {
-                  handleMenuIconClick(!isMenuOpen);
-                }}
-              >
-                <img
-                  src={isMenuOpen ? CloseIcon : MenuIcon}
-                  alt="toggle menu"
-                ></img>
-              </button>
-            </div>
+          <div>
+            <NavLink
+              end
+              to="/"
+              className="logoLink"
+              onClick={() => {
+                handleMenuClick();
+              }}
+            >
+              <img src={Logo} alt="" className="logo" />
+            </NavLink>
+            {isMobile ? (
+              <div className="mobile-wrapper-menu">
+                <button
+                  className="menu-button"
+                  onClick={() => {
+                    handleMenuIconClick(!isMenuOpen);
+                  }}
+                >
+                  <img src={MenuIcon} alt="toggle menu"></img>
+                </button>
+              </div>
+            ) : null}
+          </div>
+          {isMobile && isMenuOpen ? (
+            <div
+              onClick={() => setIsMenuOpen(false)}
+              style={{
+                position: "fixed",
+                inset: 0,
+                background: "rgba(0,0,0,0.4)",
+                zIndex: -1,
+                height: "100vh",
+              }}
+            ></div>
           ) : null}
           {(isMobile && isMenuOpen) || !isMobile ? (
-            <div className="menu-list">
-              <ul className="nav-links">
-                <li
-                  className="nav-link"
-                  onClick={() => {
-                    handleMenuClick();
-                  }}
-                >
-                  <NavLink end to="/" className="link">
-                    Home
-                  </NavLink>
-                </li>
-                <li
-                  className="nav-link"
-                  onClick={() => {
-                    handleMenuClick();
-                  }}
-                >
-                  <NavLink to="/about" className="link">
-                    About us
-                  </NavLink>
-                </li>
-                <li
-                  className="nav-link"
-                  onClick={() => {
-                    handleMenuClick();
-                  }}
-                >
-                  <NavLink to="/events" className="link">
-                    Events
-                  </NavLink>
-                </li>
-                <li
-                  className="nav-link"
-                  onClick={() => {
-                    handleMenuClick();
-                  }}
-                >
-                  <NavLink to="/contact" className="link">
-                    Contact us
-                  </NavLink>
-                </li>
-              </ul>
-            </div>
+            <>
+              <div className="menu-list">
+                <ul className="nav-links">
+                  <li
+                    className="nav-link"
+                    onClick={() => {
+                      handleMenuClick();
+                    }}
+                  >
+                    <NavLink end to="/" className="link">
+                      Home
+                    </NavLink>
+                  </li>
+                  <li
+                    className="nav-link"
+                    onClick={() => {
+                      handleMenuClick();
+                    }}
+                  >
+                    <NavLink to="/about" className="link">
+                      About us
+                    </NavLink>
+                  </li>
+                  <li
+                    className="nav-link"
+                    onClick={() => {
+                      handleMenuClick();
+                    }}
+                  >
+                    <NavLink to="/events" className="link">
+                      Events
+                    </NavLink>
+                  </li>
+                  <li
+                    className="nav-link"
+                    onClick={() => {
+                      handleMenuClick();
+                    }}
+                  >
+                    <NavLink to="/contact" className="link">
+                      Contact us
+                    </NavLink>
+                  </li>
+                </ul>
+              </div>
+              <button
+                className="book-class-btn"
+                onClick={() => bookClassClick()}
+              >
+                Book a free class
+              </button>
+            </>
           ) : null}
-          <button onClick={() => bookClassClick()}>Book a free class</button>
         </div>
       </Container>
     </div>

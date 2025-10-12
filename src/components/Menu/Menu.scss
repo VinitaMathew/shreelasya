@@ -28,23 +28,21 @@
   }
   .mobile-wrapper-menu {
     position: fixed;
-    right: 0;
-    margin-right: 24px;
-    margin-top: -20px;
+    right: 16px;
     .menu-button {
       background: none;
       border: none;
       cursor: pointer;
+      min-width: unset !important;
       img {
         height: 24px;
-        margin-top: 16px;
       }
     }
   }
   .menu-list {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 28px;
+    padding-bottom: 20px;
     .nav-links {
       display: flex;
       gap: 36px;
@@ -95,20 +93,18 @@
 
 .menu-container-mobile {
   padding-top: 48px;
-  min-height: 42px;
+  min-height: 100px;
   .logo {
-    max-height: 20px;
+    max-height: unset;
     margin-left: 24px;
   }
   .common-container {
+    flex-direction: column;
     .logoLink {
       max-height: 35px;
       position: absolute;
       top: 43px;
       left: 0px;
-    }
-    .mobile-wrapper-menu {
-      top: 43px;
     }
   }
   .menu-list {
@@ -127,5 +123,8 @@
         padding: 24px 0px;
       }
     }
+  }
+  .book-class-btn {
+    margin-bottom: 40px;
   }
 }
