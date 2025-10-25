@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Container } from "react-bootstrap";
+import Logo from "../../assets/logo.svg";
 import "./Menu.scss";
 
-const Logo = require("../../assets/logo.png");
+//const Logo = require("../../assets/logo.png");
 const MenuIcon = require("../../assets/hamburger-icon.png");
 const CloseIcon = require("../../assets/close-icon.png");
 

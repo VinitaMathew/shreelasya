@@ -21,7 +21,17 @@ export default function AboutPage() {
   let marqueeImages = [
     { img: Section5Img1, detail: "SKGA Multicultural Festival" },
     { img: Section5Img2, detail: "MSAC State-of-the-art- sports centre" },
-    { img: Section5Img3, detail: "SKGA Multicultural Festival" },
+    { img: Section5Img3, detail: "SCAFF 7 Colours Arts & Film Festival" },
+    { img: Section5Img4, detail: "Melbourne Heritage Trinities Festival" },
+    { img: Section5Img5, detail: "Melbourne Margazhi" },
+    { img: Section5Img6, detail: "IPAC Australia" },
+    { img: Section5Img7, detail: "HSV Mahashivaratri Festival" },
+    { img: Section5Img8, detail: "Fiji Indian Diwali Festival (FISA)" },
+    { img: Section5Img9, detail: "Chittirai Thiruvizha" },
+    { img: Section5Img10, detail: "Australia Brahman Samaj" },
+    { img: Section5Img1, detail: "SKGA Multicultural Festival" },
+    { img: Section5Img2, detail: "MSAC State-of-the-art- sports centre" },
+    { img: Section5Img3, detail: "SCAFF 7 Colours Arts & Film Festival" },
     { img: Section5Img4, detail: "Melbourne Heritage Trinities Festival" },
     { img: Section5Img5, detail: "Melbourne Margazhi" },
     { img: Section5Img6, detail: "IPAC Australia" },
@@ -59,26 +69,18 @@ export default function AboutPage() {
         <div className="inner-section-1">
           <Container>
             <div className="content">
-              <div
-                style={{
-                  fontSize: "64px",
-                  fontFamily: "Lora",
-                  maxWidth: "566px",
-                }}
-              >
-                Subhashree Thyagarajan
-              </div>
-              <div style={{ fontSize: "18px", maxWidth: "566px" }}>
+              <div className="heading">Subhashree Thyagarajan</div>
+              <div className="details">
                 The visionary behind Shree Lasya Performing Arts (SLPA) is
                 Subhashree Thyagarajan— a passionate performing artist,
                 choreographer and the founder-director of the academy. She
                 started dancing as a toddler at the age of 6 and completed her
-                Arangetram (Rangapravesham) in 2012. She went on to pursue and
-                attained a Master’s Degree (Vidwat) in Bharatanatyam affiliated
-                to Karnataka State Government, further deepening her knowledge
-                and expertise in the art form earned under the tutelage of  Guru
-                Vidhushi Dr. Indu Nadig at Sri Sharada Nrithyalaya, Bangalore,
-                Karnataka-India.
+                Arangetram (Rangapravesham) in 2012.
+                <br /> She went on to pursue and attained a Master’s Degree
+                (Vidwat) in Bharatanatyam affiliated to Karnataka State
+                Government, further deepening her knowledge and expertise in the
+                art form earned under the tutelage of  Guru Vidhushi Dr. Indu
+                Nadig at Sri Sharada Nrithyalaya, Bangalore, Karnataka-India.
               </div>
             </div>
           </Container>
@@ -151,7 +153,7 @@ export default function AboutPage() {
                     Subbulakshmi, created for Indian Raga online fellowship.
                   </div>
                 </div>
-                <div style={{ maxWidth: "min-content" }}>
+                <div className="image-2-wrapper">
                   <div style={{ position: "relative" }}>
                     <img alt="" src={Section4Img2} />
                     <div className="img-detail">Shambho</div>
@@ -171,7 +173,7 @@ export default function AboutPage() {
           <Container>
             <div className="content">
               <h4>Performances in Melbourne</h4>
-              <div style={{ fontSize: "18px", maxWidth: "600px" }}>
+              <div className="text">
                 Subhashree and the students of Shree Lasya Performing Arts
                 (SLPA) have showcased their talent at numerous prestigious
                 events hosted by organisations including
