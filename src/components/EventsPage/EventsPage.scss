@@ -39,6 +39,9 @@
           min-width: unset;
           margin: 0;
           max-height: fit-content;
+          max-width: max-content;
+          margin-left: 4px;
+          height: auto;
         }
 
         .read-more-btn:hover {
@@ -49,6 +52,27 @@
         font-weight: 700;
         width: fit-content;
         margin-top: 8px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .events-page-container {
+    padding-top: 150px;
+    .title {
+      font-size: 32px;
+    }
+    .events-list {
+      flex-direction: column;
+      .events-list-item {
+        background-image: url("../../assets/calendar-icon.svg");
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-blend-mode: exclusion;
+        img {
+          display: none;
+        }
       }
     }
   }

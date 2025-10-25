@@ -39,7 +39,7 @@ export default function EventsPage() {
   }
 
   useEffect(() => {
-    let upcomingEvents = getUpcomingEvents(events);
+    let upcomingEvents = getUpcomingEvents(events, 6);
     upcomingEvents = upcomingEvents?.map((item) => {
       const [description, link] = getEventDetails(item.description);
       return { ...item, desc: description, navLink: link };

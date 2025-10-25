@@ -6,6 +6,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    .title {
+      font-size: 64px;
+      font-family: "Lora";
+    }
     .desc {
       font-size: 18px;
       width: 600px;
@@ -39,5 +43,48 @@
   .form-button {
     font-weight: 700;
     margin-top: 36px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .contact-page-container {
+    .content {
+      margin-block: 160px 100px;
+      .title {
+        font-size: 48px;
+      }
+      .desc {
+        font-size: 16px;
+        width: 85%;
+      }
+    }
+    .contact-section {
+      width: 95%;
+      flex-direction: column;
+      margin-block: 115px 85px;
+      .address-wrapper,
+      .contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+        .text-wrapper {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          .phone {
+            margin-top: 16px;
+          }
+        }
+      }
+      .divider {
+        height: 1px;
+        width: 48px;
+        margin: 20px 0;
+      }
+    }
+
+    .form-button {
+      width: 90% !important;
+    }
   }
 }
