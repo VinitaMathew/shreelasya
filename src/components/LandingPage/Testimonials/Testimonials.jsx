@@ -52,23 +52,6 @@ const Testimonials = (props) => {
     >
       <h2>Our testimonials</h2>
       <div className="embla">
-        <div className="embla__viewport" ref={emblaRef}>
-          <div className="embla__container">
-            {testimonialsData.map((item, index) => (
-              <div className="embla__slide" key={index}>
-                <div className="embla__slide__number">
-                  {item.image && <img src={item.image}></img>}
-                  <div className="content">{item.content}</div>
-                  <div className="user-info">
-                    <div className="name">{item.name}</div>
-                    <div className="role">{item.role}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
         <div className="embla__controls">
           <div className="embla__buttons">
             <PrevButton
@@ -96,6 +79,22 @@ const Testimonials = (props) => {
           >
             {autoplayIsPlaying ? "Stop" : "Start"}
           </button> */}
+        </div>
+        <div className="embla__viewport" ref={emblaRef}>
+          <div className="embla__container">
+            {testimonialsData.map((item, index) => (
+              <div className="embla__slide" key={index}>
+                <div className="embla__slide__number">
+                  {item.image && <img src={item.image}></img>}
+                  <div className="content">{item.content}</div>
+                  <div className="user-info">
+                    <div className="name">{item.name}</div>
+                    <div className="role">{item.role}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
