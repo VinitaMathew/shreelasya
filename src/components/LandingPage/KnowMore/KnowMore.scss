@@ -48,6 +48,7 @@
     margin: auto;
     height: 358px;
     transition: opacity 0.3s;
+    gap: 1.5rem;
     button {
       height: 120px;
       width: 120px !important;
@@ -73,7 +74,7 @@
   }
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 1024px) {
   .know-more-container {
     .whatsapp-section {
       background-position-x: -500px;
@@ -93,6 +94,13 @@
     }
     .insta-section {
       background-position: bottom;
+      button {
+        height: 85px;
+        width: 85px !important;
+        img {
+          width: 30px;
+        }
+      }
     }
     .calendly-section {
       display: block;

@@ -170,7 +170,6 @@
         font-size: 24px;
       }
       .inner-section-1 {
-        background-position-x: -31rem;
         height: 664px;
         .content {
           padding-top: 155px;
@@ -207,7 +206,6 @@
           gap: 18px;
           img {
             height: 277px;
-            object-fit: cover;
           }
           i {
             font-size: 14px;
@@ -257,6 +255,23 @@
             .list-item {
               max-width: unset;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .about-page-container {
+    .section {
+      .inner-section-1 {
+        background-position-x: -31rem;
+      }
+      .inner-section-3 {
+        .content {
+          img {
+            object-fit: cover;
           }
         }
       }

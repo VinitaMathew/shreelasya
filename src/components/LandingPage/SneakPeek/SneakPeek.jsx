@@ -20,8 +20,7 @@ const SneakPeek = React.forwardRef((props, sneakPeekRef) => {
           <div className="video-wrapper">
             <div className="ratio ratio-16x9">
               <iframe
-                src="https://www.youtube.com/embed/qAy3Shv5EgI?si=AHcQBTftFYeiS3wP"
-                title="YouTube video"
+                src="https://www.youtube.com/embed/HB6a0AM5Zhk?si=bru6LOR5rwAn8ajQ"
                 allowFullScreen
               ></iframe>
             </div>

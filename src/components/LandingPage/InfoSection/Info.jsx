@@ -3,9 +3,7 @@ import "./Info.scss";
 export default function Info(props) {
   return (
     <div className="infoContainer">
-      <div className="infoLine">
-        Grace in Every Step. Rhythm in Every Heart.
-      </div>
+      <div className="infoLine">Grace . Rhythm . Heritage</div>
       <div className="infoContent">
         Learn the classical art of Bharatanatyam from anywhere in the world.
       </div>

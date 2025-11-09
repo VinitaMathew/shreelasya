@@ -21,7 +21,8 @@ export default function ContactPage() {
                   Address
                 </div>
                 <div style={{ fontSize: "20px", width: "250px" }}>
-                  Level 1, 123 Flinders Lane Melbourne VIC 3000 Australia
+                  U2, 39 Holywood Gr, Carnegie, Melbourne, Victoria, Australia-
+                  3163
                 </div>
               </div>
             </div>
@@ -34,7 +35,7 @@ export default function ContactPage() {
                 </div>
                 <div style={{ fontSize: "20px" }}>
                   <div>info.shreelasya@gmail.com</div>
-                  <div className="phone">+61 412 345 678</div>
+                  <div className="phone">+61 470 567 495</div>
                 </div>
               </div>
             </div>

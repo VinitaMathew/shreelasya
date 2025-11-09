@@ -9,8 +9,8 @@ const MenuIcon = require("../../assets/hamburger-icon.png");
 const CloseIcon = require("../../assets/close-icon.png");
 
 export default function Menu(props) {
-  const [isMobile] = useState(
-    window.matchMedia("only screen and (max-width:750px)").matches
+  const [isTab] = useState(
+    window.matchMedia("only screen and (max-width:1024px)").matches
   );
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
@@ -81,7 +81,7 @@ export default function Menu(props) {
   return (
     <div
       className={
-        isMobile
+        isTab
           ? "menu-container-mobile"
           : scrollY > 0
           ? "menu-container-desktop scrolled"
@@ -108,7 +108,7 @@ export default function Menu(props) {
             >
               <img src={Logo} alt="" className="logo" />
             </NavLink>
-            {isMobile ? (
+            {isTab ? (
               <div className="mobile-wrapper-menu">
                 <button
                   className="menu-button"
@@ -121,7 +121,7 @@ export default function Menu(props) {
               </div>
             ) : null}
           </div>
-          {isMobile && isMenuOpen ? (
+          {isTab && isMenuOpen ? (
             <div
               onClick={() => setIsMenuOpen(false)}
               style={{
@@ -133,7 +133,7 @@ export default function Menu(props) {
               }}
             ></div>
           ) : null}
-          {(isMobile && isMenuOpen) || !isMobile ? (
+          {(isTab && isMenuOpen) || !isTab ? (
             <>
               <div className="menu-list">
                 <ul className="nav-links">

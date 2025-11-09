@@ -51,20 +51,19 @@ const Testimonials = (props) => {
       }
     >
       <h2>Our testimonials</h2>
-      <div className="embla">
-        <div className="embla__controls">
-          <div className="embla__buttons">
-            <PrevButton
-              onClick={() => onAutoplayButtonClick(onPrevButtonClick)}
-              disabled={prevBtnDisabled}
-            />
-            <NextButton
-              onClick={() => onAutoplayButtonClick(onNextButtonClick)}
-              disabled={nextBtnDisabled}
-            />
-          </div>
+      <div className="embla__controls">
+        <div className="embla__buttons">
+          <PrevButton
+            onClick={() => onAutoplayButtonClick(onPrevButtonClick)}
+            disabled={prevBtnDisabled}
+          />
+          <NextButton
+            onClick={() => onAutoplayButtonClick(onNextButtonClick)}
+            disabled={nextBtnDisabled}
+          />
+        </div>
 
-          {/* <div
+        {/* <div
             className={`embla__progress`.concat(
               showAutoplayProgress ? "" : " embla__progress--hidden"
             )}
@@ -72,14 +71,15 @@ const Testimonials = (props) => {
             <div className="embla__progress__bar" ref={progressNode} />
           </div> */}
 
-          {/* <button
+        {/* <button
             className="embla__play"
             onClick={toggleAutoplay}
             type="button"
           >
             {autoplayIsPlaying ? "Stop" : "Start"}
           </button> */}
-        </div>
+      </div>
+      <div className="embla">
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
             {testimonialsData.map((item, index) => (

@@ -21,8 +21,12 @@ export default function UpcomingEvents() {
     triggerOnce: true,
   });
 
+  const [isTab] = useState(
+    window.matchMedia("only screen and (max-width:1024px)").matches
+  );
+
   useEffect(() => {
-    setUpcomingEvents(getUpcomingEvents(events, 2));
+    setUpcomingEvents(getUpcomingEvents(events, isTab ? 1 : 2));
   }, [events]);
 
   const handleEventClick = (desc) => {
@@ -41,7 +45,9 @@ export default function UpcomingEvents() {
       <Container>
         <div className="inner-wrapper">
           <div className="button-section">
-            <div className="title">Upcoming Events</div>
+            <div className="title">
+              {isTab ? "Upcoming Event" : "Upcoming Events"}
+            </div>
 
             <NavLink to="/events" className="link">
               <button>View all events</button>

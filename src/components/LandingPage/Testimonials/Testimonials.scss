@@ -2,7 +2,6 @@
   min-height: 900px;
   justify-content: center;
   display: flex;
-  align-items: center;
   flex-direction: column;
   h2 {
     display: flex;
@@ -209,17 +208,20 @@
   }
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 1024px) {
   .testimonials-container {
     min-height: unset;
-    .h2 {
+    h2 {
       margin-block: 100px 50px;
     }
-    .embla {
-      width: 100%;
+    .embla__controls {
+      margin-right: 1rem;
       .embla__buttons {
         gap: 0.8rem;
       }
+    }
+    .embla {
+      width: 100%;
       .embla__container {
         margin-inline: 10px;
         .embla__slide {

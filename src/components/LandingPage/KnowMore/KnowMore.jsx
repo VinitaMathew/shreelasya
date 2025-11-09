@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import { useInView } from "react-intersection-observer";
 import InstaIcon from "../../../assets/instagramIcon.svg";
+import FbIcon from "../../../assets/fbIcon.svg";
 import { InlineWidget } from "react-calendly";
 import "./KnowMore.scss";
 
@@ -35,7 +36,12 @@ const KnowMore = React.forwardRef((props, calendlyRef) => {
               and stay in touch via our WhatsApp group.
             </div>
             <button
-              onClick={() => window.open("http://www.google.com/", "_blank")}
+              onClick={() =>
+                window.open(
+                  "https://chat.whatsapp.com/ErBrYERynsl2jwb7dLNSYt?mode=wwt",
+                  "_blank"
+                )
+              }
             >
               Join our whatsapp community
             </button>
@@ -46,8 +52,25 @@ const KnowMore = React.forwardRef((props, calendlyRef) => {
         ref={ref2}
         className={inView2 ? "slide-up insta-section" : "hidden insta-section"}
       >
-        <button onClick={() => window.open("http://www.google.com/", "_blank")}>
+        <button
+          onClick={() =>
+            window.open(
+              "https://www.instagram.com/artiste_subhashreethyagarajan/",
+              "_blank"
+            )
+          }
+        >
           <img src={InstaIcon} alt="" />
+        </button>
+        <button
+          onClick={() =>
+            window.open(
+              "https://www.facebook.com/ShreeLasyaPerformingArts?mibextid=LQQJ4d",
+              "_blank"
+            )
+          }
+        >
+          <img src={FbIcon} alt="" />
         </button>
       </div>
       <div className="calendly-section" ref={calendlyRef}>
