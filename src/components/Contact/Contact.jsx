@@ -24,7 +24,7 @@ const Contact = React.forwardRef((props, contactRef) => {
             <div className="address-info">
               <div className="address-title">Address</div>
               <div className="address">
-                LU2, 39 Holywood Gr, Carnegie, Melbourne, Victoria, Australia-
+                U2, 39 Holywood Gr, Carnegie, Melbourne, Victoria, Australia-
                 3163
               </div>
               <div className="button-wrapper">

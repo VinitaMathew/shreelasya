@@ -76,7 +76,7 @@ const KnowMore = React.forwardRef((props, calendlyRef) => {
       <div className="calendly-section" ref={calendlyRef}>
         <div ref={ref3} className={inView3 ? "slide-up" : "hidden"}>
           <div className="widget-wrapper">
-            <InlineWidget url="https://calendly.com/vinitatest2010/30min" />
+            <InlineWidget url="https://calendly.com/info-shreelasya/30min" />
           </div>
         </div>
       </div>

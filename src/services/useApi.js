@@ -2,7 +2,7 @@ export async function getEvents() {
   try {
     const apiKey = process.env.REACT_APP_API_KEY;
     const response = await fetch(
-      `https://www.googleapis.com/calendar/v3/calendars/vinitatest2010@gmail.com/events?key=${apiKey}`
+      `https://www.googleapis.com/calendar/v3/calendars/info.shreelasya@gmail.com/events?key=${apiKey}`
     );
     if (!response.ok) {
       throw new Error("Network response was not ok " + response.statusText);

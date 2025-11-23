@@ -27,6 +27,7 @@ export default function UpcomingEvents() {
 
   useEffect(() => {
     setUpcomingEvents(getUpcomingEvents(events, isTab ? 1 : 2));
+    console.log(getUpcomingEvents(events, isTab ? 1 : 2), "events");
   }, [events]);
 
   const handleEventClick = (desc) => {

@@ -46,9 +46,14 @@ export default function ContactPage() {
           </div>
           <button
             className="form-button"
-            onClick={() => window.open("http://www.google.com/", "_blank")}
+            onClick={() =>
+              window.open(
+                "https://docs.google.com/forms/d/e/1FAIpQLSeh-wd7H1XmgoZcjhZaPHs4SZlg05rg05-5CpoIRQemsG1uRA/viewform",
+                "_blank"
+              )
+            }
           >
-            Open form
+            Get in touch
           </button>
         </div>
       </div>
