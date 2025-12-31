@@ -88,7 +88,7 @@ export default function EventsPage() {
             })}
           </ul>
         ) : (
-          <div>No events to show</div>
+          <div className="no-events">No events to show</div>
         )}
       </div>
     </Container>

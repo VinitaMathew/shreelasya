@@ -13,7 +13,7 @@ const servicesArr = [
     image: ServiceImg2,
   },
   {
-    label: "Cultural depth, modern teaching",
+    label: "Cultural depth with modern teaching",
     image: ServiceImg3,
   },
   {

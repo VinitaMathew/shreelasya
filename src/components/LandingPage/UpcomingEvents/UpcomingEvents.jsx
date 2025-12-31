@@ -44,51 +44,60 @@ export default function UpcomingEvents() {
       }
     >
       <Container>
-        <div className="inner-wrapper">
-          <div className="button-section">
+        {upcomingEvents?.length > 0 ? (
+          <div className="inner-wrapper">
+            <div className="button-section">
+              <div className="title">
+                {isTab ? "Upcoming Event" : "Upcoming Events"}
+              </div>
+
+              <NavLink to="/events" className="link">
+                <button>View all events</button>
+              </NavLink>
+            </div>
+            {isLoading && <div>Loading...</div>}
+            {upcomingEvents && upcomingEvents?.length > 0 ? (
+              <ul className="events-list">
+                {upcomingEvents.map((event, index) => {
+                  return (
+                    <li
+                      key={index}
+                      className="list-item"
+                      onClick={() => handleEventClick(event?.description)}
+                    >
+                      <div className="day-section">
+                        <div style={{ fontSize: "24px", fontWeight: "600" }}>
+                          {new Date(event.start.dateTime).getDate()}
+                        </div>
+                        <div style={{ fontSize: "14px" }}>
+                          {getDayOfWeek(event.start.dateTime)}
+                        </div>
+                      </div>
+                      <div>
+                        <div style={{ fontSize: "14px" }}>
+                          {formatEventDate(event.start.dateTime)}
+                          {event?.location ? ` · ${event?.location}` : ""}
+                        </div>
+                        <div style={{ fontSize: "20px", fontWeight: "600" }}>
+                          {event.summary}
+                        </div>
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
+            ) : (
+              <div>No events to show</div>
+            )}
+          </div>
+        ) : (
+          <div className="no-events">
             <div className="title">
               {isTab ? "Upcoming Event" : "Upcoming Events"}
             </div>
-
-            <NavLink to="/events" className="link">
-              <button>View all events</button>
-            </NavLink>
-          </div>
-          {isLoading && <div>Loading...</div>}
-          {upcomingEvents && upcomingEvents?.length > 0 ? (
-            <ul className="events-list">
-              {upcomingEvents.map((event, index) => {
-                return (
-                  <li
-                    key={index}
-                    className="list-item"
-                    onClick={() => handleEventClick(event?.description)}
-                  >
-                    <div className="day-section">
-                      <div style={{ fontSize: "24px", fontWeight: "600" }}>
-                        {new Date(event.start.dateTime).getDate()}
-                      </div>
-                      <div style={{ fontSize: "14px" }}>
-                        {getDayOfWeek(event.start.dateTime)}
-                      </div>
-                    </div>
-                    <div>
-                      <div style={{ fontSize: "14px" }}>
-                        {formatEventDate(event.start.dateTime)}
-                        {event?.location ? ` · ${event?.location}` : ""}
-                      </div>
-                      <div style={{ fontSize: "20px", fontWeight: "600" }}>
-                        {event.summary}
-                      </div>
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
-          ) : (
             <div>No events to show</div>
-          )}
-        </div>
+          </div>
+        )}
       </Container>
     </div>
   );

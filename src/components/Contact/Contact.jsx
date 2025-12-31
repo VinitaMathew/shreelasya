@@ -24,8 +24,7 @@ const Contact = React.forwardRef((props, contactRef) => {
             <div className="address-info">
               <div className="address-title">Address</div>
               <div className="address">
-                U2, 39 Holywood Gr, Carnegie, Melbourne, Victoria, Australia-
-                3163
+                1240, Dandenong Road, Murrumbeena, Victoria , Australia -3163
               </div>
               <div className="button-wrapper">
                 <button
@@ -53,7 +52,7 @@ const Contact = React.forwardRef((props, contactRef) => {
             <div className="contact-info">
               <div className="contact-title">Contact</div>
               <div className="phone-no">+61 470 567 495</div>
-              <div className="email-address">info@sreelasya.com</div>
+              <div className="email-address">info.shreelasya@gmail.com</div>
             </div>
           </div>
         </div>

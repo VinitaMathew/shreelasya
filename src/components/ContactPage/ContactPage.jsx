@@ -21,8 +21,7 @@ export default function ContactPage() {
                   Address
                 </div>
                 <div style={{ fontSize: "20px", width: "250px" }}>
-                  U2, 39 Holywood Gr, Carnegie, Melbourne, Victoria, Australia-
-                  3163
+                  1240, Dandenong Road, Murrumbeena, Victoria , Australia -3163
                 </div>
               </div>
             </div>

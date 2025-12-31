@@ -63,7 +63,7 @@ export default function ServicesSection(props) {
             className={inView2 ? "slide-up section" : "hidden section"}
           >
             <div className="content-wrapper">
-              <h2>Why Learn With Sree Laysa?</h2>
+              <h2>Why Learn With Shree Lasya?</h2>
               <div className="content">
                 We are thrilled to have you join us on this exciting journey of
                 rhythm, movement and expression. Whether you are a seasoned

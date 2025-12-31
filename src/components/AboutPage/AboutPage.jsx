@@ -114,16 +114,16 @@ export default function AboutPage() {
                     whose teachings form the foundation of her bharatanatyam
                     practice. She has had the privilege of being mentored by
                     some of the most renowned exponents of Bharatanatyam,
-                    including Vidhushi Rama Vaidhyanathan, Vidhushi Brugha
-                    Basel, the Gurus of Upadhye School of Dance, and Vidwan
+                    including Vidhushi Rama Vaidhyanathan, Vidhushi Bragha
+                    Bessell, the Gurus of Upadhye School of Dance, and Vidwan
                     Mavin Khoo — guidance that continues to shape her artistic
                     journey enriching her practice with depth and authenticity. 
                     In addition, she pursues her training in the Carnatic
                     classical music under the guidance of the esteemed Guru
                     Vidwan, Karnataka Kalashree Tirumale Srinivas (Chamy Sir).
-                    Their invaluable Their invaluable lessons in discipline,
-                    devotion, and expression continue to inspire her path as
-                    both a dancer and a teacher.
+                    Their invaluable lessons in discipline, devotion, and
+                    expression continue to inspire her path as both a dancer and
+                    a teacher.
                   </div>
                 </div>
               </div>
@@ -151,6 +151,8 @@ export default function AboutPage() {
                   <div className="text">
                     A tribute to the Legendary Carnatic Vocalist M.S.
                     Subbulakshmi, created for Indian Raga online fellowship.
+                    Krishna Kalaapam is a dance repertoire in praise of Lord
+                    Krishna (in his avatars) who played every role with a flair.
                   </div>
                 </div>
                 <div className="image-2-wrapper">
@@ -160,7 +162,7 @@ export default function AboutPage() {
                   </div>
                   <div className="text">
                     A powerful  portrayal of the cosmic union of Lord Shiva and
-                    Goddes Parvathi, blending themes of strength & grace,
+                    Goddess Parvathi, blending themes of strength & grace,
                     devotion & divine balance, asceticism & beauty, destruction
                     & creation.
                   </div>

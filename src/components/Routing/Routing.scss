@@ -14,16 +14,16 @@
   h2 {
     font-family: "Lora", serif;
   }
-  .slide-up {
-    transform: translateY(-2.3rem);
-    opacity: 1;
-    transition: opacity 1s ease-out, transform 0.45s ease-out;
-  }
+  // .slide-up {
+  //   transform: translateY(-2.3rem);
+  //   opacity: 1;
+  //   transition: opacity 1s ease-out, transform 0.45s ease-out;
+  // }
 
-  .hidden {
-    opacity: 0;
-    transform: translateY(40px);
-  }
+  // .hidden {
+  //   opacity: 0;
+  //   transform: translateY(40px);
+  // }
 }
 
 @media only screen and (max-width: 540px) {

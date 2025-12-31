@@ -4,6 +4,18 @@
   display: flex;
   align-items: center;
   margin-top: 40px;
+
+  .no-events {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 24px;
+    font-family: "Lora", serif;
+  }
   .inner-wrapper {
     display: flex;
     max-width: 95%;
@@ -13,10 +25,6 @@
       display: flex;
       flex-direction: column;
       gap: 18px;
-      .title {
-        font-size: 24px;
-        font-family: "Lora", serif;
-      }
       button {
         background: none;
         border-color: #f3bb3e;

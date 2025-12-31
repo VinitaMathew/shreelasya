@@ -3,6 +3,10 @@
   max-width: 95%;
   margin: auto;
   padding-top: 200px;
+  .no-events {
+    display: flex;
+    justify-content: center;
+  }
   .title {
     font-size: 64px;
     display: flex;

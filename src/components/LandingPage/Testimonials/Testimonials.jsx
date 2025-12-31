@@ -89,7 +89,7 @@ const Testimonials = (props) => {
                   <div className="content">{item.content}</div>
                   <div className="user-info">
                     <div className="name">{item.name}</div>
-                    <div className="role">{item.role}</div>
+                    {/* <div className="role">{item.role}</div> */}
                   </div>
                 </div>
               </div>

@@ -23,6 +23,11 @@ const SneakPeek = React.forwardRef((props, sneakPeekRef) => {
                 src="https://www.youtube.com/embed/HB6a0AM5Zhk?si=bru6LOR5rwAn8ajQ"
                 allowFullScreen
               ></iframe>
+              {/* <iframe
+                src="https://www.youtube.com/embed/HB6a0AM5Zhk?autoplay=1&mute=1&controls=0&loop=1&playlist=HB6a0AM5Zhk"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+              ></iframe> */}
             </div>
           </div>
         </div>
