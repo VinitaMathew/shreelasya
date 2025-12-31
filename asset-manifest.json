@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.0a92ea33.css",
-    "main.js": "/static/js/main.9d1cff9d.js",
+    "main.css": "/static/css/main.83a26bfa.css",
+    "main.js": "/static/js/main.378b89f6.js",
     "static/js/453.a337fbda.chunk.js": "/static/js/453.a337fbda.chunk.js",
-    "static/media/instagramBg.svg": "/static/media/instagramBg.bb1c1742f788d16221b2.svg",
+    "static/media/instagramBg.svg": "/static/media/instagramBg.348462dc530a74085b70.svg",
     "static/media/gallery2.svg": "/static/media/gallery2.ca27b391d7a262c85a685ccb50a762cf.svg",
     "static/media/gallery4.svg": "/static/media/gallery4.23ad4fd6802c1badba4c38911148e2b4.svg",
     "static/media/about-section-2.svg": "/static/media/about-section-2.87a61678389f3e8255a5c9fb850fd236.svg",
@@ -60,12 +60,12 @@
     "static/media/bharatanatyam-design.svg": "/static/media/bharatanatyam-design.d4d49f30c8eda6788a3a.svg",
     "static/media/learn-section-design.svg": "/static/media/learn-section-design.268e203979efa05346a7.svg",
     "static/media/fbIcon.svg": "/static/media/fbIcon.3b022bf628d304da07f9cdbe377be327.svg",
-    "main.0a92ea33.css.map": "/static/css/main.0a92ea33.css.map",
-    "main.9d1cff9d.js.map": "/static/js/main.9d1cff9d.js.map",
+    "main.83a26bfa.css.map": "/static/css/main.83a26bfa.css.map",
+    "main.378b89f6.js.map": "/static/js/main.378b89f6.js.map",
     "453.a337fbda.chunk.js.map": "/static/js/453.a337fbda.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a92ea33.css",
-    "static/js/main.9d1cff9d.js"
+    "static/css/main.83a26bfa.css",
+    "static/js/main.378b89f6.js"
   ]
 }
